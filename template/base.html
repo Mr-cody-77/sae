@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(to right, #630887, #9523c2);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+.navbar ul{
+    display: flex;
+    column-gap: 30px;
+}
+.navbar ul li{
+    display: inline;
+
+}
+.navbar ul li a{
+    color: white;
+    text-decoration: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.navbar ul li a:hover{
+    color: yellow;
+}
+.navbar p{
+    color:white;
+}
+.foot{
+    background: linear-gradient(to right, #630887, #9523c2);
+    color: black;
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    left: 0px;
+    height: 50px;
+    justify-content: center;
+}
+
+</style>
+<body>
+    <nav class="navbar">
+        <p>SAE NIT DURGAPUR</p>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Team Members</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">About Us</a></li>
+    </ul>
+    </nav>
+    <section class="container">
+        {% block body %}{% endblock body %}
+    </section>
+    <section class="foot">
+        <h2>Important Linkes</h2>
+    </section>
+
+
+    
+</body>
+</html>

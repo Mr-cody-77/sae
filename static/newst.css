@@ -1,0 +1,206 @@
+body{
+    background: url('bg2.jpg') no-repeat ;
+    background-size:cover;
+}
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    font-size: 1.2em;
+    flex-wrap: wrap;
+    }
+    .navbar ul{
+    display: flex;
+    column-gap: 30px;
+    }
+    .navbar ul li{
+    display: inline;
+    
+    }
+    .navbar ul li a{
+    color: white;
+    
+    text-decoration: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    }
+    .navbar ul li a:hover{
+    color: yellow;
+    }
+    .navbar h1{
+        color: white;
+    }
+    @keyframes glowing {
+        from {
+            text-shadow:  0 0 10px #00f, 0 0 20px #00f, 0 0 30px #00f, 0 0 40px #00f, 0 0 50px #00f, 0 0 60px #00f, 0 0 70px #00f, 0 0 80px #00f;
+        }
+        to {
+            text-shadow: 0 0 40px #00f;
+        }
+    }
+    .navbar h1{
+        font-style: italic;
+        text-shadow: 0 0 10px #00f, 0 0 20px #00f, 0 0 30px #00f, 0 0 40px #00f, 0 0 50px #00f, 0 0 60px #00f, 0 0 70px #00f, 0 0 80px #00f;
+        animation: glowing 1s infinite;
+    }
+.contain{
+    display: flex;
+    column-gap: 5vw;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 8vw;
+}
+.box{
+    border: 2px  solid green;
+    padding: 5vw;
+    border: 3px solid white;
+    background: transparent;
+    backdrop-filter: blur(0.2vw);
+    box-shadow: 5px 5px 20px rgba(255, 255, 255),
+                -5px -5px 20px rgba(46, 247, 46);
+    border-radius: 20px;
+    width: 15vw;
+    padding-bottom:3vw ;
+    padding-top:3vw ;
+}
+.box form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vw;
+    align-items: center;
+}
+.box form h1{
+    color: white;
+}
+.box form input{
+        display: block;
+        height: 2.3vw;
+        width: 20vw;
+        text-align: center;
+        border-radius: 20px;
+        background: transparent;
+        font-size: 1vw;
+        color: white;
+    
+}
+.box form input::placeholder{
+    color: white;
+}
+.box form input:focus{
+    border: 2px solid rgb(44, 230, 44);
+    box-shadow: 0 0 30px rgb(44, 230, 44);
+}
+.box form button{
+    border: 2px solid white;
+    color: white;
+    background: black;
+    font-size: 1.2vw;
+    border-radius: 10px;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-bottom: 0.5vw;
+    padding-top: 0.5vw;
+}
+.box form button:hover{
+    background-color: rgb(76, 251, 45);
+    border: 2px solid rgb(76, 251, 45);
+    box-shadow: 0 0 50px rgb(76, 251, 45);
+}
+.ok{
+    display: flex;
+    column-gap: 2vw;
+    /* border: 2px solid blue; */
+    width: 45vw;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 1.6vw;
+}
+.box1{
+    background-color: red;
+    width: 30vw;
+    height: 25vw;
+    text-align: center;
+    background: transparent;
+    backdrop-filter: blur(2px);
+    border: 2px solid white;
+    box-shadow: 0 0 20px yellow;
+    border-radius: 20px;
+}
+.box2{
+    background-color: yellow;
+    text-align: center;
+    width: 30vw;
+    height: 25vw;
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+    border: 2px solid white;
+    box-shadow: 0 0 20px red;
+    background: transparent;
+}
+@media (max-width:950px){
+    .menu-icon {
+        display: block;
+        position: fixed;
+        top: 15px;
+        right: 20px;
+        color: white;
+        background: rgb(44, 13, 46);
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 20px;
+    }
+    .navbar ul{
+        display: none;
+    }
+    .navbar h1{
+        font-size: 5vw;
+    }
+    .contain{
+        display: flex;
+        row-gap: 2vw;
+        flex-direction: column;
+        padding: 2vw;
+        align-items: center;
+        row-gap: 15vw;
+        margin-top: 20vw;
+    }
+    .box{
+        width: 80%;
+    }
+    .box form{
+        font-size: 5vw;
+    }
+    .box form input{
+        font-size: 5vw;
+        width: 50vw;
+        height: 15vw;
+    }
+    .box form button{
+        font-size: 5vw;
+    }
+    .ok{
+        display: flex;
+        flex-direction: column;
+        row-gap: 10vw;
+        width: 100%;
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+    .box1{
+        width: 80%;
+        font-size: 5vw;
+        height: 65vw;
+    }
+    .box2{
+        width: 80%;
+        font-size: 5vw;
+        height: 65vw;
+    }
+
+}

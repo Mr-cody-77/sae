@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hamburger Menu</title>
+<!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<body>
+<style>
+    /* Hamburger menu styles */
+.menu-toggle {
+  display: none; /* Hide by default on larger screens */
+  cursor: pointer;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Menu styles */
+.menu {
+  display: none; /* Hide by default on smaller screens */
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu li {
+  padding: 10px 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Media query to toggle visibility */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Show on smaller screens */
+  }
+
+  .menu {
+    display: block; /* Show on smaller screens */
+  }
+
+  .menu.active {
+    display: block; /* Show when menu is active */
+  }
+
+  /* Animations for hamburger icon */
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(5px) rotate(45deg);
+  }
+
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-5px) rotate(-45deg);
+  }
+}
+
+</style>
+<!-- Hamburger menu icon -->
+<div class="menu-toggle">
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+</div>
+
+<!-- Navigation menu -->
+<nav class="menu">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auditions</title>
+</head>
+{% load static %}
+<link rel="stylesheet" href="{% static 'formstyle.css' %}">
+<body>
+    <nav class="navbar">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <ul class="lists">
+            <li><a href="/">Home</a></li>
+            <li><a href="#">Team Members</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">About Us</a></li>
+    </ul>
+    </nav>
+    <div class="name">
+        <h1>SAE NIT DURGAPUR</h1>
+    </div>
+    <div class="box">
+        <form method="post" action="/audition" class="form">
+            <h1>Auditions</h1>
+            {% csrf_token %}
+            <input type="text" name='name', placeholder="Enter Your Name">
+            <input type="text" name='roll', placeholder="Enter Your Roll No.">
+            <input type="text" name="dept", placeholder="Enter Your Department">
+            <input type="number" name="phone", placeholder=" Enter Your Phone Number(whatsapp)">
+            <button type='submit'>Submit</button>
+        </form>
+    </div>
+    <section class="ok">
+            <div class='empty'></div>
+            <div class='box1'>
+                <h2>Instruction</h2>
+                <p>1. Do not leave the field blank. <br> 2. Rule No. 2 <br> 3. Dule No. 3</p>
+            </div>
+            <div class='box2'>
+                <h2>Help Desk</h2>
+            <h3>contact</h3>
+            <p>Ayush :- 6666666666</p>
+            <p>Subham :- 9999999999</p>
+        </div>
+    </section>
+        
+</body>
+</html>

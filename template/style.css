@@ -1,0 +1,17 @@
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    background: rgba(111, 14, 111, 0.975);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+.navbar ul{
+    display: flex;
+    column-gap: 30px;
+}
+.navbar ul li{
+    display: inline;
+
+}
